@@ -86,6 +86,21 @@ public class MyLinkedList_T<T> {
         return MyLL_T;
     }
 
+    // новый список с обратным порядком без add и get
+    public MyLinkedList_T<T> reversed_T() {
+        MyLinkedList_T<T> reverseadList = new MyLinkedList_T<>();
+        addRecursiv(head, reverseadList);
+        reverseadList.add(head.value);
+        return reverseadList;
+    }
+
+    private void addRecursiv(Node<T> node, MyLinkedList_T<T> list) {
+        if (node.next != null) {
+            addRecursiv(node.next, list);
+            list.add(node.next.value);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("[");

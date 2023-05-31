@@ -28,5 +28,10 @@ public class Less3_T {
         myLinkedListRevers = myLinkedList_T.reversed();
         System.out.println(myLinkedListRevers);
 
+        // новый список с обратным порядком рекурсивно
+        System.out.println("\nНОВЫЙ список с обратным порядком рекурсивно: ");
+        MyLinkedList_T<Integer> myLinkedListRecursiv = new MyLinkedList_T<>();
+        myLinkedListRecursiv = myLinkedList_T.reversed_T();
+        System.out.println(myLinkedListRecursiv);
     }
 }
